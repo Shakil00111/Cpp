@@ -2,6 +2,7 @@
 using namespace std;
 
 void lowerTrianguler(int row, int col);
+void upperTiranguler(int row, int col);
 
 int main() {
 
@@ -33,6 +34,18 @@ void lowerTrianguler(int row, int col) {
 
     for(int i = 0; i < col; i++) {
         for(int j = 0; j < row && j <= i; j++) {
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+}
+
+void upperTrianguler(int row, int col) {
+
+    cout<<"Upper Trianguler pattern is :"<<endl;
+
+    for(int i = 0; i < col; i++) {
+        for(int j = row; j >= 0; j--) {
             cout<<"* ";
         }
         cout<<endl;
