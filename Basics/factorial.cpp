@@ -3,21 +3,25 @@
 #include<cmath>
 using namespace std;
 
-int fact(int num);
+double fact(double num);
 
 int main() {
 
-    int num;
+    double num;
 
-    cout<<"Enter a integer : ";
+    cout<<"Enter a doubleeger : ";
     cin>>num;
 
-    cout<<"Factorial is : "<<fact(abs(num));
+    if(num >= 0) {
+        cout<<"Factorial is : "<<fact(num);
+    } else {
+        cout<<"Factorial is : "<<fact(abs(num)) * (-1);
+    }
 
     return 0;
 }
 
-int fact(int num) {
+double fact(double num) {
 
     if(num == 0) {
         return 1;
