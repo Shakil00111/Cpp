@@ -12,7 +12,7 @@ int main() {
 
     for(int i = 0; i < arr.size(); i++) {
         if(item == arr[i]) {
-            cout<<item<<" is found.";
+            cout<<"\033[32m"<<item<<" is found."<<"\033[0m";
             return 0;
         }
     }
