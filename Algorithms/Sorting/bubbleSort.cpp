@@ -3,13 +3,13 @@ using namespace std;
 
 int main() {
 
-    int arr[] = {4, -8, 3, 5, 7, 9, 4, 9, 2};
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int len = sizeof(arr) / sizeof(arr[0]);
 
-    int length = sizeof(arr) / sizeof(arr[0]);
+    for (int i = 0; i < len-1; i++) {
+        for (int j = i+1; j < len-1; j++) {
+            if (arr[i] > arr[j]) {
 
-    for(int i = 0; i < length; i++) {
-        for(int j = i + 1; j < length; j++) {
-            if(arr[i] > arr[j]) {
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
@@ -17,9 +17,8 @@ int main() {
         }
     }
 
-    cout<<"Sorted array is : ";
-    for(int i = 0; i < length; i++) {
-        cout<<arr[i]<<" ";
+    for (int i = 0; i < len-1; i++) {
+        cout << arr[i] << " ";
     }
 
     return 0;
