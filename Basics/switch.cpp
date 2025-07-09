@@ -11,7 +11,7 @@ int main() {
 
     switch(num) {
         case 0:
-            cout << "hi" << endl;
+            cout << "num is 0" << endl;
             break;  
         case 10:
             cout << "num is 10" << endl;
